@@ -1,0 +1,28 @@
+<h1>Start your app experience here.</h1>
+
+
+<%= form_for(@user) do |f| %>
+<% if @user.errors.any? %>
+<div class="error_messages">
+	<h2>Form is Invalid</h2>
+	<ul>
+		<% for messages in @user.errors.full_messages %>
+			<li><%= message %></li>
+		<% end %>
+		</ul>
+	</div>
+<% end %>
+
+
+<div><%= f.label :email %></div>
+<div><%= f.text_field :email %></div>
+
+<div><%= f.label :password  %></div>
+<div><%= f.password_field :password %></div>
+
+<div><%= f.label :password_confirmation %></div>
+<div><%= f.password_field :password_confirmation %></div>
+<div>
+	<div><%= f.submit %></div>
+</div>
+<% end %>
