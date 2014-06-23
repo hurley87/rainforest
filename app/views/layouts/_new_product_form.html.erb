@@ -1,5 +1,17 @@
 <%= form_for(@product) do |f| %>
+  <% if @product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+      <ul>
+      <% @product.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+  </div>
+	<% end %>
+<% end %>
 
+<%= form_for(@product) do |f| %>
 	<div><%= f.label :name %></div>	
 	<div><%= f.text_field :name %></div>
 
@@ -10,7 +22,6 @@
 	<div><%= f.text_field :price_in_cents %></div>
 
 	<div class="submit_div">
-		<div class="submit_btn,/"><%= f.submit %></div>
+		<div class="submit_btn"><%= f.submit %></div>
 	</div>
-
 <% end %>
