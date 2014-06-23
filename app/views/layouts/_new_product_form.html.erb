@@ -1,0 +1,16 @@
+<%= form_for(@product) do |f| %>
+
+	<div><%= f.label :name %></div>	
+	<div><%= f.text_field :name %></div>
+
+	<div><%= f.label :description %></div>	
+	<div><%= f.text_area :description %></div>
+
+	<div><%= f.label :price_in_cents %></div>	
+	<div><%= f.text_field :price_in_cents %></div>
+
+	<div class="submit_div">
+		<div class="submit_btn,/"><%= f.submit %></div>
+	</div>
+
+<% end %>
