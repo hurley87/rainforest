@@ -29,6 +29,10 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
  gem 'bcrypt', '~> 3.1.7'
 
+ gem 'uikit-rails', '~> 0.0.2'
+
+ gem 'pry', '~> 0.10.0'
+
 # Use unicorn as the app server
 # gem 'unicorn'
 

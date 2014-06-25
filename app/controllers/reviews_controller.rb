@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_filter :ensure_logged_in, :only[:edit, :new, :destroy, :update, :create]
+  before_filter :ensure_logged_in, :only => [:edit, :new, :destroy, :update, :create]
 	before_filter :load_product
 
   def show

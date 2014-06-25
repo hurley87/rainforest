@@ -1,1 +1,11 @@
 <%= link_to "Create Product", new_product_path %>
+
+
+<% @products.each do |product|  %>
+
+<div class="uk-panel-box">
+	<h2><%= product.name  %></h2>
+	<p><%= product.description  %></p>
+	<h3><%= product.price_in_cents  %></h3>
+</div>
+<% end %>
