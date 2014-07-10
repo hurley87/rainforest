@@ -1,11 +1,11 @@
 <%= link_to "Create Product", new_product_path %>
 
-
-<% @products.each do |product|  %>
-
-<div class="uk-panel-box">
-	<h2><%= product.name  %></h2>
-	<p><%= product.description  %></p>
-	<h3><%= product.price_in_cents  %></h3>
-</div>
+<%= form_tag products_path, method: :get, authentication: false, id: 'search-form' do %>
+		<%= text_field_tag :search, params[:search]  %>
+		<%= submit_tag "Search"  %>
 <% end %>
+
+<div id="products">
+	<%= render @products %>
+</div>
+

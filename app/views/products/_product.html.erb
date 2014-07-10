@@ -1,0 +1,8 @@
+<% @products.each do |product|  %>
+
+<div class="uk-panel-box">
+	<h2><%= link_to product.name, product_path(product)  %></h2>
+	<p><%= product.description  %></p>
+	<h3><%= product.price_in_cents  %></h3>
+</div>
+<% end %>
